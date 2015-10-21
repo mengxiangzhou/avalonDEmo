@@ -1,0 +1,1 @@
+define("changeAddress",["../mocks/json","zepto"],function(n){avalon.define({$id:"changeAddress",addressSubmit:function(){location.href="#!/myInfo"}});return avalon.controller(function(n){n.$onEnter=function(){main.bdClass="s-bdbg1"},n.$onRendered=function(){},n.$onBeforeUnload=function(){main.bdClass="s-bdbg"}})});

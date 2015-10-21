@@ -1,0 +1,46 @@
+<section class="package mt15" ms-controller="appraise">
+    <div class="packageCon">
+        <form>
+            <div class="appra">
+                <div ms-repeat="arrayAppraise"><label><input type="radio" name="appraise" ms-duplex-string="info.appraiseState" ms-value="$index">{{el}}</label></div>
+                <!--{{info.appraise}}-->
+            </div>
+            <div class="appraList">
+                <p>服务评价，满分为五分。</p>
+                <dl>
+                    <dd>
+                        <span>服务态度</span>
+                        <div class="appraise">
+                            <i ms-repeat="attitudeArray" ms-class="stars:$index<attitudeNum" ms-on-click="attitudeFunc($index)"></i>
+                        </div>
+                    </dd>
+                    <dd>
+                        <span>服务时效</span>
+                        <div class="appraise">
+                            <i ms-repeat="agingArray" ms-class="stars:$index< agingNum" ms-on-click="agingFunc($index)"></i>
+                        </div>
+                    </dd>
+                    <dd>
+                        <span>服务形象</span>
+                        <div class="appraise">
+                            <i ms-repeat="figureArray" ms-class="stars:$index < figureNum" ms-on-click="figureFunc($index)"></i>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="message">
+                <h6>客户留言</h6>
+                <textarea placeholder="亲，说点什么吧，对于我们服务与建议。" ms-duplex="info.leaveMsg"></textarea>
+                <!--{{info.leaveMsg}}-->
+                <a href="javascript:;" class="u-btn" ms-on-click="submitFunc()">确认</a>
+            </div>
+        </form>
+    </div>
+<!--<ul>-->
+    <!--<li>评价：{{info.appraiseState}}</li>-->
+    <!--<li>服务态度：{{info.attitude}}</li>-->
+    <!--<li>服务时效：{{info.aging}}</li>-->
+    <!--<li>服务形象：{{info.figure}}</li>-->
+    <!--<li>客户留言：{{info.leaveMsg}}</li>-->
+<!--</ul>-->
+</section>

@@ -1,0 +1,1 @@
+define(["pub","mock"],function(e){var c={resultMsg:"发送成功",resultCode:0};Mock.mock("jh-lingyi-web/user/userCtl/sendCheckSms",c),Mock.mock("weixin/app/user/checkNum",c)});

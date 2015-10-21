@@ -1,0 +1,1 @@
+define("my",["../mocks/json","zepto"],function(n){avalon.define({$id:"my",myInfo:function(){location.href="#!/myInfo"}});return avalon.controller(function(n){n.$onEnter=function(){},n.$onRendered=function(){},n.$onBeforeUnload=function(){}})});

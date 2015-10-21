@@ -1,0 +1,68 @@
+<section class="details" ms-controller="infoDetail">
+    <p class="detailsTips">为方便跑腿人员及时送件到您家，请填写您的真实信息。</p>
+    <h3>{{phone}}</h3>
+    <form>
+        <ul>
+            <li>
+                <label for="userName">收件人姓名</label>
+                <input id="userName" type="text" ms-duplex="name" placeholder="请输入您的姓名">
+            </li>
+            <li>
+                <select class="user_neigh">
+                    <option selected="selected" disabled="disabled">小区名</option>
+                    <option ms-repeat="communityList">{{el.communityName}}</option>
+                </select>
+            </li>
+            <li>
+                <select class="user_area">
+                    <option selected="selected" disabled="disabled">区域</option>
+                    <option>A区</option>
+                    <option>B区</option>
+                    <option>C区</option>
+                    <option>D区</option>
+                </select>
+                <select class="user_building">
+                    <option selected="selected" disabled="disabled">栋</option>
+                    <option>1栋</option>
+                    <option>2栋</option>
+                    <option>3栋</option>
+                    <option>4栋</option>
+                    <option>5栋</option>
+                    <option>6栋</option>
+                    <option>7栋</option>
+                    <option>8栋</option>
+                    <option>9栋</option>
+                    <option>10栋</option>
+                    <option>11栋</option>
+                    <option>12栋</option>
+                </select>
+            </li>
+            <li>
+                <select class="user_floor">
+                    <option selected="selected" disabled="disabled">层</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+                <select class="user_roomNum">
+                    <option selected="selected" disabled="disabled">房号</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                </select>
+            </li>
+        </ul>
+        <input type="button" value="完成" class="bigBtn" ms-on-click="submitFunc()">
+    </form>
+</section>

@@ -1,0 +1,1 @@
+define("express",["../mocks/json","zepto"],function(n){var o=avalon.define({$id:"express",info:[]});return avalon.controller(function(n){n.$onEnter=function(){$.post("api/app/packageSendInfo",{},function(n){n.errorMsg||(o.info=n.data)},"json")},n.$onRendered=function(){},n.$onBeforeUnload=function(){}})});

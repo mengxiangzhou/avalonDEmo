@@ -1,0 +1,1 @@
+define("index",["../mocks/json","zepto"],function(n){avalon.define({$id:"index"});return avalon.controller(function(n){n.$onEnter=function(){},n.$onRendered=function(){},n.$onBeforeUnload=function(){}})});

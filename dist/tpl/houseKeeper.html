@@ -1,0 +1,87 @@
+<section ms-controller="houseKeeper">
+    <!--banner-->
+    <div class="device">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="banner" src="res/img/banner.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <!--套餐-->
+    <div class="setMeal">
+        <div class="setMealTop">
+            <div>
+                <strong>18元</strong>
+                <span>/月</span>
+            </div>
+            <div>
+                市场参考价&nbsp;&nbsp;&nbsp;<span>1500元&nbsp;/&nbsp;月</span>
+            </div>
+        </div>
+        <div class="setMealBottom">
+            <div><em></em>已售&nbsp;<span>580</span>&nbsp;份</div>
+            <div><em></em>好评&nbsp;<span>99.9%</span></div>
+        </div>
+    </div>
+    <div class="serveInfo">
+        <h5>服务详情</h5>
+
+        <div class="serveCon">
+            <img class="flag" src="res/img/flag.png">
+
+            <p>首创一站式的管家服务，将众多家庭所需的服务打包。每月仅需支付<span>18元</span>即可享受，服务不限次数。<br>
+                私人管家提供24小时在线帮助，无论衣食住行全部帮您解决。
+            </p>
+        </div>
+        <table class="serveTable">
+            <tr>
+                <th></th>
+                <th>大白管家</th>
+                <th>市场采购</th>
+            </tr>
+            <tr>
+                <td>上门洗车2次</td>
+                <td></td>
+                <td>50元(25元/次)</td>
+            </tr>
+            <tr>
+                <td>快递代送</td>
+                <td></td>
+                <td>8元(2元/次)</td>
+            </tr>
+            <tr>
+                <td>水果试吃</td>
+                <td></td>
+                <td>8元(2元/次)</td>
+            </tr>
+            <tr>
+                <td>专属管家</td>
+                <td>18元</td>
+                <td>18元(2元/次)</td>
+            </tr>
+        </table>
+    </div>
+    <div class="buyTips">
+        <a href="javascript:;">购买须知<em></em></a>
+    </div>
+    <div class="pb100"></div>
+    <div class="footer">
+        <input class="sold" type="button" value="马上抢购" ms-on-click="snapUp()">
+    </div>
+    <div class="mask" ms-visible="bSnap" ms-on-click="maskClick($event)">
+        <div class="buyPackage" ms-on-click="stopPro()">
+            <h4>管家套餐</h4>
+
+            <div class="buyPackageCon">
+                <h5>购买规格</h5>
+                <ul id="innerId">
+                    <li data-id="{{el.id}}" data-price="{{el.price}}" ms-repeat="priceInfo" ms-class="buyPackageSel:$index===index" ms-on-click="selectPrice($index)">{{el.text}}</li>
+                </ul>
+            </div>
+            <div class="buyPackageFooter">
+                <div>合计：<span id="price">{{price}}</span></div>
+                <input id="buyPackagePriceId" type="button" value="去支付" ms-on-click="goPay()">
+            </div>
+        </div>
+    </div>
+</section>

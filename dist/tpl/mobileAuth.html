@@ -1,0 +1,16 @@
+<section class="authen" ms-controller="auth">
+    <h3>第一次收件，请录入您的手机号</h3>
+        <ul>
+            <li>
+                <label for="mobileNum">手机号</label>
+                <input id="mobileNum" maxlength="11" type="tel" placeholder="请输入手机号" ms-duplex="authPhone">
+                <input ms-class="mobileVerifi unMouseDown:bBtn" type="button" ms-duplex="btnValue" ms-attr-disabled="bBtn" ms-on-click="getVal()">
+            </li>
+            <li>
+                <label for="captchas">验证码</label>
+                <input id="captchas" type="text" ms-attr-disabled="bPhone" placeholder="收到的验证码" ms-duplex="verifiVal">
+            </li>
+        </ul>
+        <input type="button" id="onNext" ms-attr-disabled="bNext" class="bigBtn nextVerifi" value="下一步" ms-on-click="nextFunc()">
+        <!--{{authPhone}}  {{verifiVal}}-->
+</section>

@@ -1,0 +1,1 @@
+define("my",["../mocks/json","zepto"],function(n){avalon.define({$id:"myInfo",renameFunc:function(){location.href="#!/rename"},changeAddress:function(){location.href="#!/changeAddress"}});return avalon.controller(function(n){n.$onEnter=function(){},n.$onRendered=function(){},n.$onBeforeUnload=function(){}})});

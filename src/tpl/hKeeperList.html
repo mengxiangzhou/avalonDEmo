@@ -1,0 +1,31 @@
+<div ms-controller="hKeeperList">
+    <div class="m-tab">
+        <a class="u-tab" href="#!/sendList">上门收件</a>
+        <a class="u-tab" href="#!/washCarList">洗车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="u-tab active" href="#!/hKeeperList">管家套餐</a>
+    </div>
+
+    <p id="emptyOrders" class="orderTips mt60" style="display: none;">亲，您还没有使用过服务，快试试吧！</p>
+
+    <div class="posCenter" id="posCenter">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="list"
+                 style="padding-top: 0px; padding-bottom: 0px; width: 414px; height: 95px; transition-duration: 0.3s; transform: translate3d(0px, 0px, 0px);">
+
+                <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+                    <div class="swiper-slide"><a class="pageLink orders" href="javascript:void(0);"
+                                                 onclick="openDetail('/jh-lingyi-web/gift/giftPackageCtrl/toGiftPackageDetail.do?app=&amp;sys=&amp;id=0b3fd3db5a294ce1bcf0384b006f8dbd')"><img
+                            src="res/img/loadImg.jpg">
+
+                        <div><p> 管家礼包</p>
+
+                            <p>2015/10/09 14:30</p></div>
+                        <span class="state3">待支付</span></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="upLoading" id="upLoading" style="display: none;">
+        <div class="title">上拉...</div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div ms-controller="express">
+    <div class="m-tab">
+        <a class="u-tab" href="#!/packageReceive">收件</a>
+        <a class="u-tab active" href="#!/packageSent">发件</a>
+    </div>
+    <div class="packageWrap my_mt">
+        <section class="package">
+            <div class="sent">
+                <div class="sentTop" ms-repeat="info">
+                    <div>时间：{{el.arriveTime}}</div>
+                    <div ms-if="el.state == 0" class="cur">等待工作人员上门接收</div>
+                    <div ms-if="el.state == 1">
+                        <div><span>{{el.title}}</span></div>
+                        <div><span>快递单号：{{el.orderNo}}</span></div>
+                        <div><span>服务人员：{{el.name}}</span></div>
+                        <div><span>手机：{{el.phone}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

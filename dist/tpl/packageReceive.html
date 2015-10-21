@@ -1,0 +1,76 @@
+<div ms-controller="packageReceive">
+    <div class="m-tab">
+        <a class="u-tab" ms-class="active:bReceive==0" ms-click="unReceiveFunc()">待收</a>
+        <a class="u-tab" ms-class="active:bReceive==1" ms-click="receivedFunc()">已收</a>
+    </div>
+    <div class="packageWrap">
+        <section class="package" ms-repeat="unReceieveInfo" ms-visible="bReceive==0" ms-if="unReceieveInfo.length>0">
+            <ul class="packageCon">
+                <li>
+                    <h3>{{el.title}}</h3>
+
+                    <div>快递单号：<span>{{el.orderNo}}</span></div>
+                </li>
+                <li>
+                    <div class="parcels">
+                        <img class="exp" ms-src="{{el.img1}}" alt="您的包裹">
+                        <img class="exp" ms-src="{{el.img2}}" alt="您的包裹">
+                    </div>
+                    <div class="orderState">
+                        <p>到达时间：{{el.arriveTime}}</p>
+                        <img class="state" ms-if="el.state == 0" src="res/img/collecting.png">
+                        <img class="state" ms-if="el.state == 1" src="res/img/consignee.png">
+                    </div>
+                </li>
+                <li>
+                    <input class="pickUp" type="button" value="自取(默认)"><a class="appointment" href="javascript:;" ms-click="bookFunc()">预约发货</a>
+                </li>
+            </ul>
+            <em></em>
+            <em></em>
+            <em></em>
+            <em></em>
+        </section>
+
+
+        <section class="package" ms-repeat="receievedInfo" ms-visible="bReceive==1" ms-if="receievedInfo.length>0">
+            <ul class="packageCon">
+                <li>
+                    <h3>{{el.title}}</h3>
+
+                    <div>快递单号：<span>{{el.orderNo}}</span></div>
+                </li>
+                <li>
+                    <div class="parcels">
+                        <img class="exp" ms-src="{{el.img1}}" alt="您的包裹">
+                        <img class="exp" ms-src="{{el.img2}}" alt="您的包裹">
+                    </div>
+                    <div class="orderState">
+                        <p>到达时间：{{el.arriveTime}}</p>
+                        <img class="state" ms-if="el.state == 0" src="res/img/collecting.png">
+                        <img class="state" ms-if="el.state == 1" src="res/img/consignee.png">
+
+                    </div>
+                </li>
+                <li ms-if="el.state == 1">
+                    <span class="signFor" ms-if="el.appraise !=0">包裹已签收</span>
+                    <span class="evaluate" ms-if="el.appraise !=0">{{appraise[el.appraise-1]}}</span>
+                    <a href="#!/appraise" ms-if="el.appraise ==0" class="signFor2">请对本次服务评价</a>
+                </li>
+            </ul>
+            <em></em>
+            <em></em>
+            <em></em>
+            <em></em>
+        </section>
+
+    </div>
+    <section class="blankParcel" ms-if="unReceieveInfo.length == 0 && receievedInfo.length == 0">
+        <div class="blankCenter">
+            <img src="res/img/logoTrans.png">
+            <strong>主人~没有收到您的任何包裹</strong>
+            <p>驿站收到您的包裹都会同步在这里显示留意查看哦</p>
+            <a href="#!/">回到首页</a>
+        </div>
+    </section>
+</div>
